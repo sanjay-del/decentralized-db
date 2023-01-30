@@ -1,0 +1,13 @@
+{
+  "name": "ipfs-main-node",
+  "version": "0.0.0",
+  "description": "A main ipfs node",
+  "author": "sanjay-del <sanjaypantha.np@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "type": "module",
+  "main": "_/index.js",
+  "scripts": {
+    "test": "node ./__tests__/ipfs-main-node.test.js"
+  }
+}
