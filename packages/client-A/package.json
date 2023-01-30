@@ -1,7 +1,7 @@
 {
-  "name": "ipfs-main-node",
-  "version": "0.0.0",
-  "description": "A main ipfs node",
+  "name": "@dev/client-a",
+  "version": "0.0.1",
+  "description": "Has a seperate instance of oribitdb",
   "author": "sanjay-del <sanjaypantha.np@gmail.com>",
   "homepage": "",
   "license": "ISC",
