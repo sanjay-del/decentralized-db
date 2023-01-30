@@ -5,7 +5,7 @@ export const AppConfig = {
     },
     ipfs: {
       repo: process.env.IPFS_REPO || "./ipfs",
-      apiAddress: process.env.IPFS_API_ADDRESS || "/ip4/127.0.0.1/tcp/4002",
+      apiAddress: process.env.IPFS_API_ADDRESS,
       swarmKeyFile: process.env.SWARM_KEY_FILE || "./swarm/swarm.key",
     },
     orbitdb: {

@@ -10,7 +10,6 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "watch": "tsc -b -w",
     "bootstrap": "npm i && lerna bootstrap --no-ci"
   }
 }

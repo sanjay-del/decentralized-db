@@ -6,7 +6,7 @@
   "homepage": "",
   "license": "ISC",
   "type": "module",
-  "main": "_/index.js",
+  "main": "_/src/server.js",
   "dependencies": {
     "dotenv": "^8.2.0",
     "@types/orbit-db": "github:orbitdb/orbit-db-types",
@@ -23,6 +23,6 @@
   },
   "scripts": {
     "compile": "tsc",
-    "start": "node -r source-map-support/register _/index.js"
+    "start": "node -r source-map-support/register _/src/server.js"
   }
 }
