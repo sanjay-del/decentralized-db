@@ -23,6 +23,6 @@
   },
   "scripts": {
     "compile": "tsc",
-    "start": "node -r source-map-support/register _/index.js"
+    "start": "node -r source-map-support/register _/src/server.js"
   }
 }

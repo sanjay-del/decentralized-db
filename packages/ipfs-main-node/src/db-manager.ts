@@ -3,6 +3,7 @@ import { AppConfig } from "./config.js"
 import {create } from "ipfs-core"
 import OrbitDB from "orbit-db"
 import {CID} from "multiformats"
+import * as IpfsClient from "ipfs-http-client";
 import {generateKey, preSharedKey} from "libp2p/pnet"
 
 export class DBManager{
@@ -17,6 +18,9 @@ export class DBManager{
     }
     async connect (){
         try {
+          if(AppConfig.ipfs.apiAddress){
+            this.node = await IpfsClient.create(AppConfig.ipfs.apiAddress)
+          }else{
             await this.removeLockIfExist()
             await this.createSwarmKey()
             const swarmKey = await fse.readFile(AppConfig.ipfs.swarmKeyFile)
@@ -57,6 +61,7 @@ export class DBManager{
                   console.log(`Peer disconnected: ${peer.remotePeer.toB58String()}`)
                 },
               )
+          }
               console.log("IPFS node connected.")
 
               this.orbitDB = await OrbitDB.createInstance(this.node, {

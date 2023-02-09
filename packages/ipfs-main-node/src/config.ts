@@ -5,15 +5,15 @@ export const AppConfig = {
     },
     ipfs: {
       repo: process.env.IPFS_REPO || "./ipfs",
-      apiAddress: process.env.IPFS_API_ADDRESS,
+      apiAddress: process.env.IPFS_API_ADDRESS || "/ip4/127.0.0.1/tcp/5001",
       swarmKeyFile: process.env.SWARM_KEY_FILE || "./swarm/swarm.key",
     },
     orbitdb: {
       repo: process.env.ORBITDB_REPO || "./orbitdb",
       databases: {
        userInfo: process.env.USER_INFO_ADDRESS || undefined,
-       paymentInfo: process.env.DIDDOC_DB_ADDRESS || undefined,
-       businessDocs: process.env.POE_DB_ADDRESS || undefined,
+       paymentInfo: process.env.PAYMENT_INFO_ADDRESS || undefined,
+       businessDocs: process.env.BUSINESS_INFO_ADDRESS || undefined,
       },
     },
   }
